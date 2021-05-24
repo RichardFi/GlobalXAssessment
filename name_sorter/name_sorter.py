@@ -1,6 +1,6 @@
-from file_read import *
-from file_write import *
-from name import *
+from file_read import FileRead
+from file_write import FileWrite
+from name import Name
 import sys
 
 class NameSorter:
@@ -8,7 +8,6 @@ class NameSorter:
         self.nameList = nameList
 
     def sort(self):
-        given = [x.givenNames for x in self.nameList]
         sortedNameList = sorted(self.nameList, key=lambda x: (x.lastName.lower(), x.givenNames.lower()))
         for name in sortedNameList:
             print(name.givenNames + ' ' + name.lastName)
