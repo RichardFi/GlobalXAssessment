@@ -3,6 +3,7 @@ from validation import Validation
 
 class FileRead:
     def __init__(self, filename):
+        # filename to be read
         self.filename = filename
 
     def read(self):
@@ -11,6 +12,7 @@ class FileRead:
 
         nameList = []
         for name in text:
+            # check if a name is valid, if not ignore it
             if Validation().isValid(name.strip()):
                 nameList.append(Name(name.strip()))
             else:

@@ -1,8 +1,9 @@
 import unittest
 import sys
-sys.path.append("/GlobalXAssessment/name_sorter")
+import os
+sys.path.append(os.path.abspath("./src"))
 
-from validation import *
+from validation import Validation
 
 class ValidationTests(unittest.TestCase):
     def test_validate_name_valid_format(self):

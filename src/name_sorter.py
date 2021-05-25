@@ -1,14 +1,16 @@
 from file_read import FileRead
 from file_write import FileWrite
-from name import Name
 import sys
 
 class NameSorter:
     def __init__(self, nameList):
+        # name list to be sorted
         self.nameList = nameList
 
     def sort(self):
+        # sort the name by last name first then given names
         sortedNameList = sorted(self.nameList, key=lambda x: (x.lastName.lower(), x.givenNames.lower()))
+        # print sorted name list
         for name in sortedNameList:
             print(name.givenNames + ' ' + name.lastName)
         return sortedNameList

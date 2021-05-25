@@ -1,6 +1,7 @@
 import unittest
 import sys
-sys.path.append("/GlobalXAssessment/name_sorter")
+import os
+sys.path.append(os.path.abspath("./src"))
 
 from name_sorter import NameSorter
 from name import Name
